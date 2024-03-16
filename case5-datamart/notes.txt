@@ -1,0 +1,4 @@
+referensi : https://github.com/SriRammSS/8-Week-SQL-Challenge/tree/main/SQL%20DATA%20WITH%20DANNY%20SERIOUS%20SQL/DATA%20MART
+
+yg masih keliru :
+saat mau merubah clean table untuk year nya
