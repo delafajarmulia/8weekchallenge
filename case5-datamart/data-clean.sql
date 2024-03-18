@@ -9,19 +9,19 @@
 -- Generate a new avg_transaction column as the sales value divided by transactions rounded to 2 decimal places for each record
 
 CREATE TABLE clean_weekly_sales AS (
-    select week_date,week(week_date) as week_number,month(week_date) as month_number,year(week_date) as year,region,platform,segment,
-    case 
-        when segment regexp "1$" then "Young Adult"
-        when segment regexp "2$" then "Middle Aged"
-        when segment regexp "3$|4$" then "Retirees"
-        else "unknown"
-    end as age_band,
-    case 
-        when segment regexp "^F" then "Families"
-        when segment regexp "^C" then "Couples"
-        else "unknown"
-    end as demographic,
+    SELECT week_date, week(week_date) AS week_number, month(week_date) AS month_number, year(week_date) AS year, region, platform, segment,
+    CASE 
+        WHEN segment REGEXP "1$" THEN "Young Adult"
+        WHEN segment REGEXP "2$" THEN "Middle Aged"
+        WHEN segment REGEXP "3$|4$" THEN "Retirees"
+        ELSE "unknown"
+    END AS age_band,
+    CASE 
+        WHEN segment REGEXP "^F" THEN "Families"
+        WHEN segment REGEXP "^C" THEN "Couples"
+        ELSE "unknown"
+    END AS demographic,
     transactions,
-    round((sales/transactions),2) as avg_transaction,
+    round((sales/transactions),2) AS avg_transaction,
     sales
-    from weekly_sales);
+    FROM weekly_sales);
