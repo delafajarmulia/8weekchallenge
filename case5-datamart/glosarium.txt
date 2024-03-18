@@ -1,0 +1,16 @@
+REGEXP -> Regular Expresion (Whether string matches regular expression)
+ROUND -> untuk pembulatan (ex: ROUND(sales, 2) -> 2 angka di belakang koma)
+WEEK -> returns the week number for a given date
+MONTH -> returns the MONTH for the date within a range of 1 to 12 ( January to December). It Returns 0 when MONTH part for the date is 0.
+YEAR -> returns the year for a given date. The return value is in the range of 1000 to 9999 or 0 for 'zero' date.
+DAYNAME -> returns the name of the week day of a date specified in the argument.
+DENSE_RANK() OVER() ->  This function will assign rank to each row within a partition without gaps. Basically, the ranks are assigned in a consecutive manner 
+                        i.e if there is a tie between values then they will be assigned the same rank, and next rank value will be one greater than the previous rank assigned.
+                        https://www.geeksforgeeks.org/mysql-ranking-functions/
+SUM() -> jumlah
+COUNT() -> total
+GROUP BY -> pengelompokkan berdasarkan kolom yg diinginkan
+ORDER BY -> untuk pengurutan data bersarkan kolom yg diinginkan (ex: ORDER BY year ASC -> pengurutan berdasarkan tahun secara ascending(dari yg terkecil ke yg terbesar), kalau DESC -> dari terbesar ke yg terkecil)
+AVG() -> rata-rata
+AS -> untuk mengaliaskan (ex: sales AS s -> sales dialiaskan mjd s)
+CTE(Common Table Expressions)
